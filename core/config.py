@@ -7,5 +7,6 @@ class Config:
     ADMIN_ID: int
 
 def get_config(path):
-    env = Env(path)
+    env = Env()
+    env.read_env(path)
     return Config(env.str("TOKEN"), env.int("ADMIN_ID"))
