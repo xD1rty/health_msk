@@ -10,13 +10,16 @@ CREATE TABLE IF NOT EXISTS health (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     telegram_id INTEGER NOT NULL,
     country TEXT NOT NULL,
-    health TEXT NOT NULL
+    health TEXT NOT NULL,
+    age INTEGER NOT NULL,
+    sex TEXT NOT NULL,
+    height INTEGER NOT NULL
 );"""
         self.cursor.execute(create_table_if_not_exists)
         self.db.commit()
     
-    def create(self, telegram_id, country, health):
-        self.cursor.execute("INSERT INTO health (telegram_id, country, health) VALUES (?, ?, ?)", (telegram_id, country, health))
+    def create(self, telegram_id, country, health, age, sex, height):
+        self.cursor.execute("INSERT INTO health (telegram_id, country, health, age, sex, height) VALUES (?, ?, ?, ?, ?, ?)", (telegram_id, country, health, age, sex, height))
         self.db.commit()
 
     def get_by_id(self, telegram_id):
