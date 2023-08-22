@@ -59,18 +59,29 @@ moscow_country_menu = ReplyKeyboardMarkup(
 moscow_health_menu = ReplyKeyboardMarkup(
     keyboard=[
         [
-            KeyboardButton("Супер"),
-            KeyboardButton("Отлично!")
+            KeyboardButton(text="Супер"),
+            KeyboardButton(text="Отлично!")
         ],
         [
-            KeyboardButton("Хорошо"),
-            KeyboardButton("Приемлимо")
+            KeyboardButton(text="Хорошо"),
+            KeyboardButton(text="Приемлемо")
         ],
         [
-            KeyboardButton("Плохо"),
-            KeyboardButton("Фигово")
+            KeyboardButton(text="Плохо"),
+            KeyboardButton(text="Фигово")
         ]
     ],
     resize_keyboard=True,
     one_time_keyboard=True
+)
+
+moscow_sex_menu = ReplyKeyboardMarkup(
+    keyboard=[
+        [
+            KeyboardButton(text="Мужской"),
+            KeyboardButton(text="Женский")
+        ]
+    ],
+    one_time_keyboard=True,
+    resize_keyboard=True
 )
