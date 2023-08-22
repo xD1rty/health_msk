@@ -1,5 +1,6 @@
 from aiogram import Bot
 from aiogram.types import Message
+
 from core.keyboards.markup import main_menu
 
 async def get_start(msg: Message, bot: Bot):
@@ -9,4 +10,4 @@ async def get_start(msg: Message, bot: Bot):
 Плохо или хорошо сегодня себя чувствовал? 🥱
 Добавь эти данные в нашего бота 🤖
 
-*❗️ БОТ СДЕЛАН В ОЗНАКОМИТЕЛЬНЫХ ЦЕЛЯХ ❗️️*""", reply_markup=main_menu)
+*\❗️ БОТ СДЕЛАН В ОЗНАКОМИТЕЛЬНЫХ ЦЕЛЯХ \❗️️*""".replace("!", "\!"), reply_markup=main_menu)
