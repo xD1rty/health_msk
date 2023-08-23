@@ -1,4 +1,4 @@
-from aiogram import Bot
+from aiogram import Bot, html
 from aiogram.types import Message
 
 from core.keyboards.markup import main_menu
@@ -10,4 +10,4 @@ async def get_start(msg: Message, bot: Bot):
 Плохо или хорошо сегодня себя чувствовал? 🥱
 Добавь эти данные в нашего бота 🤖
 
-*\❗️ БОТ СДЕЛАН В ОЗНАКОМИТЕЛЬНЫХ ЦЕЛЯХ \❗️️*""".replace("!", "\!"), reply_markup=main_menu)
+{html.bold(html.quote("❗ БОТ СДЕЛАН В ОЗНАКОМИТЕЛЬНЫХ ЦЕЛЯХ ❗️️"))}""", reply_markup=main_menu)

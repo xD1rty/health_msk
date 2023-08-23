@@ -57,5 +57,5 @@ async def TheEND(msg: Message, state: FSMContext):
 Состояние: *{data['health']}*
 Возраст: *{data['age']}*
 Пол: *{data['sex']}*
-Рост: *{height} см.*""".replace("!", "\!"))
+Рост: *{height} см.*""", parse_mode="Markdown")
     await state.clear()
